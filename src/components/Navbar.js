@@ -4,9 +4,8 @@ export default function NavBar() {
       <div className="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Name / Logo */}
         <a href="/" className="text-lg font-bold text-white tracking-tight">
-        Okan Akdağ
+        Okan Akdag
         </a>
-
         {/* Navigation links */}
         <div className="flex gap-6 text-sm text-gray-400">
           <NavItem href="/" text="Home" />
