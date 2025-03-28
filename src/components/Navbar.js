@@ -3,17 +3,29 @@ export default function NavBar() {
     <nav className="w-full border-b border-white/10 backdrop-blur-md shadow-md bg-gray-900/40">
       <div className="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Name / Logo */}
-        <span className="text-lg font-bold text-white tracking-tight">
-          Okan Akdag
-        </span>
+        <a href="/" className="text-lg font-bold text-white tracking-tight">
+        Okan Akdağ
+        </a>
 
         {/* Navigation links */}
         <div className="flex gap-6 text-sm text-gray-400">
-          <a href="/" className="hover:text-white transition-colors">Home</a>
-          <a href="/projects" className="hover:text-white transition-colors">Projects</a>
-          <a href="/blog" className="hover:text-white transition-colors">Blog</a>
+          <NavItem href="/" text="Home" />
+          <NavItem href="/projects" text="Projects" />
+          <NavItem href="/blog" text="Blog" />
         </div>
       </div>
     </nav>
+  );
+}
+
+function NavItem({ href, text }) {
+  return (
+    <a
+      href={href}
+      className="relative group text-gray-400 hover:text-white transition-colors duration-200"
+    >
+      {text}
+      <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+    </a>
   );
 }
