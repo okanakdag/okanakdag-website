@@ -1,7 +1,11 @@
+import Footer from "../components/Footer";
+import Navar from "../components/Navbar";
+
+
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <Navar />
       <main className="max-w-3xl mx-auto px-4 py-12 space-y-20">
         <AboutSection />
         <ProjectsPreview />
@@ -12,22 +16,6 @@ export default function Home() {
   );
 }
 
-// NavBar component
-function NavBar() {
-  return (
-    <nav className="w-full border-b px-4 py-3">
-      <div className="max-w-3xl mx-auto flex justify-between items-center">
-        <span className="font-semibold text-lg">Okan Akdağ</span>
-        <div className="flex gap-4 text-sm">
-          <a href="/projects" className="hover:underline">Projects</a>
-          <a href="/blog" className="hover:underline">Blog</a>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-// About Section
 function AboutSection() {
   return (
     <section>
@@ -51,7 +39,6 @@ function AboutSection() {
   );
 }
 
-// Projects Preview
 function ProjectsPreview() {
   return (
     <section>
@@ -77,7 +64,6 @@ function ProjectsPreview() {
   );
 }
 
-// Blog Preview
 function BlogPreview() {
   return (
     <section>
@@ -100,22 +86,5 @@ function BlogPreview() {
         View all posts →
       </a>
     </section>
-  );
-}
-
-// Footer
-function Footer() {
-  return (
-    <footer className="border-t mt-20 py-6 text-center text-sm text-gray-500">
-      <div className="flex justify-center gap-4">
-        <a href="https://github.com/okanakdag" target="_blank" rel="noopener noreferrer" className="hover:underline">
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/okanakdag" target="_blank" rel="noopener noreferrer" className="hover:underline">
-          LinkedIn
-        </a>
-      </div>
-      <p className="mt-2">© {new Date().getFullYear()} Okan Akdağ</p>
-    </footer>
   );
 }
