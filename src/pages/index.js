@@ -24,17 +24,6 @@ function AboutSection() {
         I’m a computer engineering student passionate about building clean, performant web applications.
         I enjoy working with modern technologies like JavaScript, React, Next.js, and C#.
       </p>
-
-      <div className="mt-4">
-        <h3 className="text-lg font-medium">Skills</h3>
-        <ul className="flex flex-wrap gap-2 mt-2 text-sm">
-          <li className="bg-gray-100 px-2 py-1 rounded">JavaScript</li>
-          <li className="bg-gray-100 px-2 py-1 rounded">C#</li>
-          <li className="bg-gray-100 px-2 py-1 rounded">React</li>
-          <li className="bg-gray-100 px-2 py-1 rounded">Next.js</li>
-          <li className="bg-gray-100 px-2 py-1 rounded">SQL</li>
-        </ul>
-      </div>
     </section>
   );
 }
