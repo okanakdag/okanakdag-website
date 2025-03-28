@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
-import Navar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 
 
 export default function Home() {
   return (
     <>
-      <Navar />
+      <Navbar />
       <main className="max-w-3xl mx-auto px-4 py-12 space-y-20">
         <AboutSection />
         <ProjectsPreview />
