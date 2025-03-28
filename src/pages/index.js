@@ -18,7 +18,7 @@ function NavBar() {
     <nav className="w-full border-b px-4 py-3">
       <div className="max-w-3xl mx-auto flex justify-between items-center">
         <span className="font-semibold text-lg">Okan Akdağ</span>
-        <div className="flex gap-4 text-sm text-gray-700">
+        <div className="flex gap-4 text-sm">
           <a href="/projects" className="hover:underline">Projects</a>
           <a href="/blog" className="hover:underline">Blog</a>
         </div>
@@ -32,14 +32,14 @@ function AboutSection() {
   return (
     <section>
       <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-      <p className="text-gray-700">
+      <p>
         I’m a computer engineering student passionate about building clean, performant web applications.
         I enjoy working with modern technologies like JavaScript, React, Next.js, and C#.
       </p>
 
       <div className="mt-4">
         <h3 className="text-lg font-medium">Skills</h3>
-        <ul className="flex flex-wrap gap-2 mt-2 text-sm text-gray-600">
+        <ul className="flex flex-wrap gap-2 mt-2 text-sm">
           <li className="bg-gray-100 px-2 py-1 rounded">JavaScript</li>
           <li className="bg-gray-100 px-2 py-1 rounded">C#</li>
           <li className="bg-gray-100 px-2 py-1 rounded">React</li>
@@ -59,13 +59,13 @@ function ProjectsPreview() {
       <div className="space-y-4">
         <div className="p-4 border rounded">
           <h3 className="text-lg font-bold">Social Diet Platform</h3>
-          <p className="text-gray-600">
+          <p>
             A social platform for tracking meals and nutrition. Built as a thesis project using C# and SQL.
           </p>
         </div>
         <div className="p-4 border rounded">
           <h3 className="text-lg font-bold">Personal Portfolio</h3>
-          <p className="text-gray-600">
+          <p>
             This site. Built with Next.js and Tailwind CSS to showcase projects and blog posts.
           </p>
         </div>
@@ -82,7 +82,7 @@ function BlogPreview() {
   return (
     <section>
       <h2 className="text-2xl font-semibold mb-4">Latest Blog Posts</h2>
-      <ul className="space-y-2 text-gray-700">
+      <ul className="space-y-2">
         <li>
           <a href="/blog/first-post" className="hover:underline">
             Getting Started with Next.js
@@ -96,7 +96,7 @@ function BlogPreview() {
           <span className="block text-sm text-gray-500">March 2025</span>
         </li>
       </ul>
-      <a href="/blog" className="block mt-4 text-blue-600 hover:underline">
+      <a href="/blog" className="block mt-4 text-blue-100 hover:underline">
         View all posts →
       </a>
     </section>
