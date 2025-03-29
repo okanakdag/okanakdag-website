@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -16,6 +16,20 @@ export default function Home() {
   );
 }
 
+function IconButton({ icon: Icon, label, href }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors bg-gray-800 px-2 py-1 rounded-md shadow-md hover:shadow-lg hover:bg-gray-700"
+    >
+      <Icon className="w-5 h-5" />
+      <span>{label}</span>
+    </a>
+  );
+}
+
 function AboutSection() {
   return (
     <section>
@@ -24,6 +38,13 @@ function AboutSection() {
         I’m a computer engineering student passionate about building clean, performant web applications.
         I enjoy working with modern technologies like JavaScript, React, Next.js, and C#.
       </p>
+
+      <div className="flex flex-wrap gap-6 mt-6">
+        <IconButton icon={FaFileAlt} label="View CV" href="/cv.pdf" />
+        <IconButton icon={FaGithub} label="GitHub" href="https://github.com/okanakdag" />
+        <IconButton icon={FaLinkedin} label="LinkedIn" href="https://linkedin.com/in/okanakdag" />
+      </div>
+
     </section>
   );
 }
