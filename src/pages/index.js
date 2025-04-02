@@ -1,5 +1,8 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ProjectCard from "../components/ProjectCard";
+import projects from "../data/projectsData";
+
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 export default function Home() {
@@ -52,24 +55,11 @@ function AboutSection() {
 function ProjectsPreview() {
   return (
     <section>
-      <h2 className="text-2xl font-semibold mb-4">Featured Projects</h2>
-      <div className="space-y-4">
-        <div className="p-4 border rounded">
-          <h3 className="text-lg font-bold">Social Diet Platform</h3>
-          <p>
-            A social platform for tracking meals and nutrition. Built as a thesis project using C# and SQL.
-          </p>
-        </div>
-        <div className="p-4 border rounded">
-          <h3 className="text-lg font-bold">Personal Portfolio</h3>
-          <p>
-            This site. Built with Next.js and Tailwind CSS to showcase projects and blog posts.
-          </p>
-        </div>
-      </div>
-      <a href="/projects" className="block mt-4 text-blue-600 hover:underline">
-        View all projects →
-      </a>
+<div className="space-y-6">
+  {projects.map((project) => (
+    <ProjectCard key={project.title} {...project} />
+  ))}
+</div>
     </section>
   );
 }
