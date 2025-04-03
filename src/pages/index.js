@@ -57,7 +57,8 @@ function ProjectsPreview() {
     <section>
       <h2 className="text-xl font-semibold mb-4">Projects</h2>
       <div className="space-y-3">
-        {projects.map((project) => (
+        // Display the first three projects
+        {projects.slice(0, 3).map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
       </div>
