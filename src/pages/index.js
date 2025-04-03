@@ -7,15 +7,17 @@ import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-12 space-y-20">
+      
+      <main className="flex-grow max-w-3xl mx-auto px-4 py-12 space-y-20">
         <AboutSection />
         <ProjectsPreview />
         <BlogPreview />
       </main>
+      
       <Footer />
-    </>
+    </div>
   );
 }
 
