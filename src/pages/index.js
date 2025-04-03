@@ -55,11 +55,15 @@ function AboutSection() {
 function ProjectsPreview() {
   return (
     <section>
-<div className="space-y-6">
-  {projects.map((project) => (
-    <ProjectCard key={project.title} {...project} />
-  ))}
-</div>
+      <h2 className="text-xl font-semibold mb-4">Projects</h2>
+      <div className="space-y-3">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </div>
+      <a href="/projects" className="block mt-4 text-white hover:underline">
+        View all projects →
+      </a>
     </section>
   );
 }
